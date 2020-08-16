@@ -4,8 +4,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 1. Install the dependencies
    `npm i`
-2. To start Server in your local machine
-   `npm run start`
+2. To start development Server in your local machine
+   `npm run dev`
 3. To run the unit test
    `npm run test`
 
