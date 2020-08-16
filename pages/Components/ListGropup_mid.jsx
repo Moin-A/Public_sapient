@@ -6,9 +6,11 @@ class ListGroup extends Component {
     return (
       <React.Fragment>
         <p className="font-weight-bold">Mission ids</p>
-        <ul class="list-group ">
-          {Object.values(mission_ids).map((item) => (
-            <li className="list-group-item">{item}</li>
+        <ul className="list-group ">
+          {Object.values(mission_ids).map((item, index) => (
+            <li key={index} className="list-group-item">
+              {item}
+            </li>
           ))}
         </ul>
       </React.Fragment>

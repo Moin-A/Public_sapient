@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import List from "./ListGropup_mid";
-const Card = ({ card_details }) => {
+const Card = ({ card_details, index }) => {
   const {
     mission_name,
     flight_number,
@@ -18,15 +18,15 @@ const Card = ({ card_details }) => {
     : "NA";
 
   return (
-    <div class="card-group">
-      <div class="card m-1">
+    <div className="card-group" key={index}>
+      <div className="card m-1">
         <img
-          class="card-img-top img-thumbnail"
+          className="card-img-top img-thumbnail"
           src={links.mission_patch_small}
           alt="Card image cap"
         ></img>
-        <div class="card-body">
-          <h5 class="card-title text-primary">{`${mission_name}#${flight_number}`}</h5>
+        <div className="card-body">
+          <h5 className="card-title text-primary">{`${mission_name}#${flight_number}`}</h5>
           <List mission_ids={mission_id} />
           <p className="font-weight-bold">
             Launch Year<span> : </span>

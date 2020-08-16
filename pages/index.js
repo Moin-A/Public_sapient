@@ -2,11 +2,14 @@ import Head from "next/head";
 import Filter from "./Components/Filter";
 import React, { Component } from "react";
 import Details from "./Components/Details";
+import filter from "./utils/filter";
 
 class Home extends Component {
   state = {
     launch_year: [],
     newdata: [],
+    SelectedLaunchYear: "",
+    SelectedOptions: "",
   };
   componentDidMount() {
     this.setState({
@@ -15,12 +18,26 @@ class Home extends Component {
     });
   }
 
-  handleyearchange(value) {
-    console.log(value);
-  }
+  handleFilter = (value) => {
+    this.setState({ SelectedOptions: value });
+  };
+
+  handleyearchange = (value) => {
+    this.setState({ SelectedLaunchYear: value, SelectedOptions: [] });
+  };
 
   render() {
-    const { launch_year, newdata } = this.state;
+    const {
+      launch_year,
+      newdata,
+      SelectedLaunchYear,
+      SelectedOptions,
+    } = this.state;
+    const filtered = SelectedLaunchYear
+      ? newdata.filter((m) => m.launch_year == SelectedLaunchYear)
+      : newdata;
+    const secondfiltered = filter(filtered, SelectedOptions);
+
     return (
       <>
         <Head>
@@ -35,10 +52,11 @@ class Home extends Component {
                 <Filter
                   launch_year={launch_year}
                   onYearChange={this.handleyearchange}
+                  onOptionSelection={this.handleFilter}
                 />
               </div>
               <div className="col m-4">
-                <Details data={newdata} />
+                <Details data={secondfiltered} />
               </div>
             </div>
           </div>
