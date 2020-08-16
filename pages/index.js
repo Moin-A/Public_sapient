@@ -65,6 +65,8 @@ class Home extends Component {
               <div className="col-lg-3 col-md-4 col-auto-sm-12 m-2 ">
                 <Filter
                   launch_year={launch_year}
+                  SelectedLaunchYear={SelectedLaunchYear}
+                  SelectedOptions={SelectedOptions}
                   onYearChange={this.handleyearchange}
                   onOptionSelection={this.handleFilter}
                 />

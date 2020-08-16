@@ -1,7 +1,13 @@
 import React, { Component } from "react";
 import Buttons from "./Button";
 
-const Filter = ({ launch_year, onYearChange, onOptionSelection }) => {
+const Filter = ({
+  launch_year,
+  onYearChange,
+  onOptionSelection,
+  SelectedLaunchYear,
+  SelectedOptions,
+}) => {
   return (
     <div className="border bg-light p-3 ">
       <h4 className="text-center font-weight-light border-bottom mr-5 ml-5 p-1 ">
@@ -13,6 +19,11 @@ const Filter = ({ launch_year, onYearChange, onOptionSelection }) => {
             key={year}
             onClick={() => onYearChange(year)}
             className="btn btn-success btn-md col-5  m-2"
+            className={
+              year == SelectedLaunchYear
+                ? "btn btn-info btn-md col-5  m-2"
+                : "btn btn-success btn-md col-5  m-2"
+            }
             style={{ cursor: "pointer" }}
           >
             {year}
@@ -22,11 +33,13 @@ const Filter = ({ launch_year, onYearChange, onOptionSelection }) => {
           text="Successfull Launch"
           textProperty="launch_success"
           onOptionSelection={onOptionSelection}
+          SelectedOptions={SelectedOptions}
         />
         <Buttons
           text="Successfull Landing"
           textProperty="rocket.first_stage.cores[0].land_success"
           onOptionSelection={onOptionSelection}
+          SelectedOptions={SelectedOptions}
         />
       </div>
     </div>
@@ -37,6 +50,8 @@ Filter.defaultProps = {
   launch_year: [],
   onYearChange: () => {},
   onOptionSelection: () => {},
+  SelectedLaunchYear: "",
+  SelectedOption: {},
 };
 
 export default Filter;
