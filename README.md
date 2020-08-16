@@ -17,10 +17,10 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 DESKTOP
 
-| First Header | Second Header                              |
-| ------------ | ------------------------------------------ |
-| DESKTOP      | ACCESSEBILITY:97, BEST-PRACTICE:85, SEO:89 |
-| MOBILE       | ACCESSEBILITY:97, BEST-PRACTICE:85, SEO:89 |
+| DEVICE  | Score                                      |
+| ------- | ------------------------------------------ |
+| DESKTOP | ACCESSEBILITY:97, BEST-PRACTICE:85, SEO:89 |
+| MOBILE  | ACCESSEBILITY:97, BEST-PRACTICE:92, SEO:91 |
 
 ![image](https://user-images.githubusercontent.com/43196743/90339152-960ec080-e00c-11ea-9ad5-efc8eeff4e7c.png)
 ![image](https://user-images.githubusercontent.com/43196743/90339440-77a9c480-e00e-11ea-94f1-22783a4cb255.png)
