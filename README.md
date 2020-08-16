@@ -3,20 +3,26 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## Steps to run the app
 
 1. Install the dependencies
-   npm run i
-2. To run the development Server
-   npm run dev
+   `npm run i`
+2. To start Server in your local machine
+   `npm run start`
 3. To run the unit test
-   npm run test
+   `npm run test`
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 **Live site https://public-sapient.vercel.app/**
 
-![Test Image 3]("./vercel.svg")
+## LIGHTHOUSE SCORE
 
-## Deploy on Vercel
+DESKTOP
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+| First Header | Second Header                              |
+| ------------ | ------------------------------------------ |
+| DESKTOP      | ACCESSEBILITY:97, BEST-PRACTICE:85, SEO:89 |
+| MOBILE       | ACCESSEBILITY:97, BEST-PRACTICE:85, SEO:89 |
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![image](https://user-images.githubusercontent.com/43196743/90339152-960ec080-e00c-11ea-9ad5-efc8eeff4e7c.png)
+![image](https://user-images.githubusercontent.com/43196743/90339440-77a9c480-e00e-11ea-94f1-22783a4cb255.png)
+
+## Deployed on Vercel
