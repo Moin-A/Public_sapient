@@ -48,14 +48,14 @@ class Home extends Component {
           <div className="container-fluid">
             <h2 className="m-4 m-4">SpaceX Launch programes </h2>
             <div className="row">
-              <div className="col-3 m-4">
+              <div className="col-lg-3 col-md-4 col-auto-sm-12 m-2 ">
                 <Filter
                   launch_year={launch_year}
                   onYearChange={this.handleyearchange}
                   onOptionSelection={this.handleFilter}
                 />
               </div>
-              <div className="col m-4">
+              <div className="col-lg-8 col-md-6 col-auto-sm-4 m-2 ">
                 <Details data={secondfiltered} />
               </div>
             </div>
