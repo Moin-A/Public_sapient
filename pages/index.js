@@ -1,8 +1,7 @@
 import Head from "next/head";
-import Filter from "./Components/Filter";
+import Filter from "./Filter";
 import React, { Component } from "react";
-import Details from "./Components/Details";
-import filter from "./utils/filter";
+import Details from "./Details";
 
 class Home extends Component {
   state = {
@@ -36,11 +35,25 @@ class Home extends Component {
     const filtered = SelectedLaunchYear
       ? newdata.filter((m) => m.launch_year == SelectedLaunchYear)
       : newdata;
+
+    function filter(arra, options) {
+      const { textProperty, valueProperty } = options;
+      let newarray = arra.filter(
+        (item) => _.get(item, textProperty) === valueProperty
+      );
+      return newarray;
+    }
     const secondfiltered = filter(filtered, SelectedOptions);
 
     return (
       <>
         <Head>
+          <html lang={"en"} />
+          <meta name="og:type" content="website" />
+          <meta name="description" content={"spacex launch querry site"} />
+          <meta name="og:title" content={"SpaceX Calender"} />
+          <meta name="description" content={"SpaceX Calender"} />
+          <meta name="keywords" content={("SpaceX", "space", "rocket")} />
           <title>Create Next App</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
@@ -69,6 +82,7 @@ class Home extends Component {
     const res = await fetch(
       "https://api.spacexdata.com/v3/launches?limit=100&amp;launch_success=true&amp;land_success=true&amp;launch_year=2014"
     );
+
     const data = await res.json();
     let filteredarray = data.map((value) => value.launch_year);
     let launch_year = Array.from(new Set(filteredarray));

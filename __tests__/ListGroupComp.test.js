@@ -1,4 +1,4 @@
-import ListGroup from "../pages/Components/ListGropup_mid";
+import ListGroup from "../pages/ListGropup_mid";
 import React from "react";
 
 import { shallow } from "enzyme";

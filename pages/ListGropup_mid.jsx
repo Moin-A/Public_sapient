@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 class ListGroup extends Component {
   renderList() {
-    const { mission_ids } = this.props;
+    const { mission_ids = [] } = this.props;
     if (this.props.mission_ids.length === 0) return null;
     return (
       <React.Fragment>
@@ -21,5 +21,9 @@ class ListGroup extends Component {
     return this.renderList();
   }
 }
+
+ListGroup.defaultProps = {
+  mission_ids: [],
+};
 
 export default ListGroup;

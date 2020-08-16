@@ -13,4 +13,8 @@ const Details = ({ data }) => {
   );
 };
 
+Details.defaultProps = {
+  data: [],
+};
+
 export default Details;

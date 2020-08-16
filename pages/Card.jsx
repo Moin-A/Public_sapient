@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import List from "./ListGropup_mid";
+import _ from "lodash";
 const Card = ({ card_details, index }) => {
   const {
     mission_name,
@@ -11,7 +12,7 @@ const Card = ({ card_details, index }) => {
     rocket,
   } = card_details || {};
   let launch_s = card_details.launch_success ? "true" : "false";
-  let land_s = rocket.first_stage.cores[0].land_success
+  let land_s = _.get(rocket, "first_stage.cores[0].land_success")
     ? "true"
     : rocket.first_stage.cores[0].land_success == false
     ? "false"
@@ -46,6 +47,14 @@ const Card = ({ card_details, index }) => {
       </div>
     </div>
   );
+};
+
+Card.defaultProps = {
+  card_details: {
+    rocket: { first_stage: { cores: [{ land_success: true }] } },
+    links: { mission_patch_small: true },
+  },
+  index: 1,
 };
 
 export default Card;

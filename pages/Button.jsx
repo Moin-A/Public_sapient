@@ -1,5 +1,9 @@
 import React, { Component } from "react";
-const Button = ({ text, onOptionSelection, textProperty }) => {
+const Button = ({
+  text = "",
+  onOptionSelection = () => {},
+  textProperty = true,
+}) => {
   return (
     <div className="row" style={{ justifyContent: "center" }}>
       <h4 className="text-center font-weight-light border-bottom mr-5 ml-5 p-1 ">

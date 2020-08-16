@@ -33,4 +33,10 @@ const Filter = ({ launch_year, onYearChange, onOptionSelection }) => {
   );
 };
 
+Filter.defaultProps = {
+  launch_year: [],
+  onYearChange: () => {},
+  onOptionSelection: () => {},
+};
+
 export default Filter;

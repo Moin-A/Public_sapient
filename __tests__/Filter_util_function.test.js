@@ -1,4 +1,4 @@
-import Filter from "../pages/utils/filter";
+import Filter from "../util_filter";
 
 describe(" Test Button Component", () => {
   it("Verity button component ", () => {
