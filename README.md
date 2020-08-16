@@ -3,7 +3,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## Steps to run the app
 
 1. Install the dependencies
-   `npm run i`
+   `npm i`
 2. To start Server in your local machine
    `npm run start`
 3. To run the unit test
