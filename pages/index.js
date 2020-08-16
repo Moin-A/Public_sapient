@@ -2,6 +2,7 @@ import Head from "next/head";
 import Filter from "./Filter";
 import React, { Component } from "react";
 import Details from "./Details";
+import _ from "lodash";
 
 class Home extends Component {
   state = {
