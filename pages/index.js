@@ -48,13 +48,13 @@ class Home extends Component {
     return (
       <>
         <Head>
+          <title>SpaceX Launch Filter</title>
           <html lang={"en"} />
           <meta name="og:type" content="website" />
           <meta name="description" content={"spacex launch querry site"} />
           <meta name="og:title" content={"SpaceX Calender"} />
           <meta name="description" content={"SpaceX Calender"} />
           <meta name="keywords" content={("SpaceX", "space", "rocket")} />
-          <title>Create Next App</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <div style={{ backgroundColor: "lightgrey" }}>

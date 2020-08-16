@@ -1,0 +1,13 @@
+{
+  "/Button": "pages/Button.html",
+  "/Card": "pages/Card.html",
+  "/Details": "pages/Details.html",
+  "/Filter": "pages/Filter.html",
+  "/ListGropup_mid": "pages/ListGropup_mid.html",
+  "/_app": "pages/_app.js",
+  "/api/hello": "pages/api/hello.js",
+  "/": "pages/index.js",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/404": "pages/404.html"
+}
