@@ -10,6 +10,7 @@ const Filter = ({
 }) => {
   return (
     <div className="border-auto bg-light p-4 ">
+      <h3 className="text-center font-weight-bold">Filters</h3>
       <h4 className="text-center font-weight-light border-bottom   p-1 ">
         Launch Year
       </h4>
@@ -33,13 +34,13 @@ const Filter = ({
           text="Successfull Launch"
           textProperty="launch_success"
           onOptionSelection={onOptionSelection}
-          SelectedOptions={SelectedOptions}
+          Options={SelectedOptions}
         />
         <Buttons
           text="Successfull Landing"
           textProperty="rocket.first_stage.cores[0].land_success"
           onOptionSelection={onOptionSelection}
-          SelectedOptions={SelectedOptions}
+          Options={SelectedOptions}
         />
       </div>
     </div>

@@ -81,6 +81,16 @@ class Home extends Component {
               </div>
             </div>
           </div>
+          <p class="text-center p-3 text-monospace font-weight-bold">
+            Developed :{" "}
+            <span className="text-monospace font-weight-light">Moin Ahmed</span>
+          </p>
+          {/* <div className="p-4">
+            <span className="font-weight-bold text-monospace">
+              Developed By :
+            </span>
+            <span className="text-monospace"> Moin Ahmed</span>
+          </div> */}
         </div>
       </>
     );

@@ -3,7 +3,7 @@ const Button = ({
   text = "",
   onOptionSelection = () => {},
   textProperty = true,
-  SelectedOption = {},
+  Options = { value: "" },
 }) => {
   return (
     <div className="row" style={{ justifyContent: "center" }}>
@@ -12,20 +12,36 @@ const Button = ({
       </h4>
       <button
         key={"btn-1"}
-        onClick={() =>
-          onOptionSelection({ textProperty, valueProperty: true, value: "Yes" })
+        onClick={() => {
+          onOptionSelection({
+            textProperty,
+            valueProperty: true,
+            value: `${text}-Yes`,
+          });
+        }}
+        className={
+          Options.value === `${text}-Yes`
+            ? "btn btn-info btn-sm col-5  m-1"
+            : "btn btn-success btn-sm col-5  m-1"
         }
-        className="btn btn-success btn-sm col-5  m-1 "
         style={{ cursor: "pointer" }}
       >
         Yes
       </button>
       <button
         key={"btn-2"}
-        onClick={() =>
-          onOptionSelection({ textProperty, valueProperty: false, value: "No" })
+        onClick={() => {
+          onOptionSelection({
+            textProperty,
+            valueProperty: false,
+            value: `${text}-No`,
+          });
+        }}
+        className={
+          Options.value === `${text}-No`
+            ? "btn btn-info btn-sm col-5  m-1"
+            : "btn btn-success btn-sm col-5  m-1"
         }
-        className="btn btn-success btn-sm col-5  m-1 "
         style={{ cursor: "pointer" }}
       >
         No
