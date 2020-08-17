@@ -1,7 +1,47 @@
 import React, { Component } from "react";
 import List from "./ListGropup_mid";
-import _ from "lodash";
+import styled from "styled-components";
+import _, { wrap } from "lodash";
+import { Media } from "react-bootstrap";
 const Card = ({ card_details, index }) => {
+  const Div = styled.div`
+    @media (max-width: 4000px) {
+      width: 12rem;
+    }
+    @media (max-width: 1321px) {
+      width: 11rem;
+    }
+    @media (max-width: 1217px) {
+      width: 10rem;
+    }
+    @media (max-width: 1121px) {
+      width: 9rem;
+    }
+    @media (max-width: 1000px) {
+      width: 14rem;
+    }
+    @media (max-width: 916px) {
+      width: 13rem;
+    }
+    @media (max-width: 847px) {
+      width: 12rem;
+    }
+    @media (max-width: 782px) {
+      width: 11rem;
+    }
+    @media (max-width: 702px) {
+      width: auto;
+    }
+
+    h5 {
+      width: min-content;
+    }
+  `;
+
+  const H5 = styled.h5`
+    width: min-content;
+  `;
+
   const {
     mission_name,
     flight_number,
@@ -19,15 +59,15 @@ const Card = ({ card_details, index }) => {
     : "NA";
 
   return (
-    <div className="card-group" key={index}>
-      <div className="card m-1">
+    <div className="card-deck p-1" key={index}>
+      <Div className="card m-3 ">
         <img
           className="card-img-top img-thumbnail"
           src={links.mission_patch_small}
           alt="Card image cap"
         ></img>
         <div className="card-body">
-          <h5 className="card-title text-primary">{`${mission_name}#${flight_number}`}</h5>
+          <H5 className="card-title text-primary">{`${mission_name}#${flight_number}`}</H5>
           <List mission_ids={mission_id} />
           <p className="font-weight-bold">
             Launch Year<span> : </span>
@@ -44,7 +84,7 @@ const Card = ({ card_details, index }) => {
             <span className="font-weight-light text-primary">{land_s}</span>
           </p>
         </div>
-      </div>
+      </Div>
     </div>
   );
 };

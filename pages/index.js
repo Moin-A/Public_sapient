@@ -58,11 +58,16 @@ class Home extends Component {
           <meta name="keywords" content={("SpaceX", "space", "rocket")} />
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <div style={{ backgroundColor: "lightgrey" }}>
+        <div style={{ backgroundColor: "lightgrey", minHeight: "30rem" }}>
           <div className="container-fluid">
-            <h2 className="m-4 m-4">SpaceX Launch programes </h2>
-            <div className="row">
-              <div className="col-lg-3 col-md-4 col-auto-sm-12 m-2 ">
+            <h1
+              style={{ justifyContent: "center", marginLeft: "3rem" }}
+              className="p-2"
+            >
+              SpaceX Launch programes{" "}
+            </h1>
+            <div className="row" style={{ justifyContent: "center" }}>
+              <div className="col-lg-3 col-md-4 col-auto-sm-6  m-2 ">
                 <Filter
                   launch_year={launch_year}
                   SelectedLaunchYear={SelectedLaunchYear}
@@ -71,7 +76,7 @@ class Home extends Component {
                   onOptionSelection={this.handleFilter}
                 />
               </div>
-              <div className="col-lg-8 col-md-6 col-auto-sm-4 m-2 ">
+              <div className="col-lg-8 col-md-7 col-auto-sm-12 m-2 ">
                 <Details data={secondfiltered} />
               </div>
             </div>

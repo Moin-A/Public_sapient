@@ -9,8 +9,8 @@ const Filter = ({
   SelectedOptions,
 }) => {
   return (
-    <div className="border bg-light p-3 ">
-      <h4 className="text-center font-weight-light border-bottom mr-5 ml-5 p-1 ">
+    <div className="border-auto bg-light p-4 ">
+      <h4 className="text-center font-weight-light border-bottom   p-1 ">
         Launch Year
       </h4>
       <div className="row" style={{ justifyContent: "center" }}>

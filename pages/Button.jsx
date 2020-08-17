@@ -15,7 +15,7 @@ const Button = ({
         onClick={() =>
           onOptionSelection({ textProperty, valueProperty: true, value: "Yes" })
         }
-        className="btn btn-success btn-md col-5  m-1 "
+        className="btn btn-success btn-sm col-5  m-1 "
         style={{ cursor: "pointer" }}
       >
         Yes
@@ -25,7 +25,7 @@ const Button = ({
         onClick={() =>
           onOptionSelection({ textProperty, valueProperty: false, value: "No" })
         }
-        className="btn btn-success btn-md col-5  m-1 "
+        className="btn btn-success btn-sm col-5  m-1 "
         style={{ cursor: "pointer" }}
       >
         No
